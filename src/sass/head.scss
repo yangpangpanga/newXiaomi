@@ -1,0 +1,248 @@
+$width:1230px;
+@mixin md {
+    margin: 0 auto;
+    width: $width;
+}
+@mixin none {
+    text-decoration: none;
+}
+@mixin zero {
+    margin-bottom: 0px;
+}
+@import './public.scss';
+.box{
+    color: #909090;
+    height:40px;
+    background: #262626;
+    
+    .middle-top{
+        height: 40px;
+        width: $width;
+        // overflow: hidden;
+        font-size:12px;
+        position: relative;
+        @include md;
+        ul {
+            float: left;
+            margin-bottom: 0px;
+           
+            > li{
+                float: left;
+                line-height: 40px;
+                margin-right: 8px;
+                > a{
+                    color: #b0b0b0;
+                    @include none;
+                }
+                > span{
+                    color: #393e3e;
+                    margin-right: 6px;
+                }
+               
+            }
+        }
+            
+        ol {
+            margin-left: 250px;
+            height: 40px;
+            float: left;
+            margin-bottom: 0px;
+            > li{
+                float: left;
+                line-height: 40px;
+                margin-right: 6px;
+                > a{
+                    color: #b0b0b0;
+                    @include none;
+                    
+                }
+                > span{
+                    margin-right: 8px;
+                    color: #393e3e;
+                }
+            }
+        }
+        .willlogina{
+            display: none;
+            width: 290px;
+            height: 40px;
+            position: absolute;
+            left: 848px;
+            p{
+                float: left;
+                width: 70px;
+                color: #b0b0b0;
+                cursor: pointer; 
+                margin-right: 10px;
+                span{
+                    color: #373737;
+                }
+                &:hover{
+                    color: #ee7231;
+                    span{
+                        color: #373737;
+                    }
+                }
+                span{
+                    margin-left: 10px;
+                }
+            }
+            .mycon{
+                width: 120px;
+                height: 40px;
+                &:hover{
+                    background: #ffffff;
+                    
+                }
+            }
+        }
+        .willshow{
+            display: none;
+            top: 40px;
+            z-index: 120;
+            left: 848px;
+            width: 120px;
+            position: absolute;
+            height: 165px;
+            background:#ffffff;
+            >ul li{
+                height: 33px;
+                width: 120px;
+                line-height: 33px;
+                text-align: center;
+                margin-right: 0;
+                color: #545454;
+                cursor: pointer;
+                &:hover{
+                    background: #f5f5f5;
+                    color:  #ee7231;
+                   
+                }
+            }
+        }
+        p{ 
+            width: 120px;
+            margin-bottom: 0px;
+            text-align: center;
+            height: 40px;
+            float: right;
+            color: #999999;
+            line-height: 40px;
+            >span{
+                margin-right: 4px;
+            }
+            
+        }
+    }
+}
+.navT{//第一个二级导航区域
+    position: relative;
+    height: 100px;
+    .tabB{
+        display: none;
+        z-index: 100;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+       padding-top: 33px;
+       height: 196px;
+       background: #ffffff;
+        border-top:  1px solid #e0e0e0;
+        @include zero;      
+        .show{ 
+            display: block;
+        }
+        > ol{
+            display: none;
+            @include md;
+            margin-bottom: 0px;
+            li{
+                text-align: center;
+                float: left;
+                p:first-of-type{
+                    border-right: 1px solid #e0e0e0;
+                    width: 203px;
+                    height: 101px;
+                    text-align: center;
+                    @include zero();
+                    >img{                      
+                        width: 76px;
+                        height: 101px;
+                    }
+                }
+                p:nth-of-type(2){
+                    margin-top: 22px;
+                    margin-bottom: 9px;
+                    font-size: 12px;
+                    color: #333333;
+                }
+                p:nth-of-type(3){
+                   font-size: 12px;
+                    color: #ef7b3e;
+                }
+               
+            }
+        }
+    }
+    .middle-navT{
+        @include md;
+        height: 100px;
+        line-height: 100px;
+        > p{
+            float: left;
+            margin-top: 22px;
+            margin-right: 188px;              
+            width: 55px;
+            height: 55px;
+            background-color: #ff6700;
+            @include zero;
+            background-image: url(../img/mi-logo.png) ;
+        }
+        > .tabchange{
+            float: left;            
+            height: 100px;
+            @include zero;
+            ul{
+                width: 612px;
+                @include clearF();
+                @include zero;
+                li{
+                    float: left;
+                    padding-right: 20px;
+                    a{
+                        font-size: 16px;
+                        color: #333333;
+                        &:hover{
+                            text-decoration: none;                           
+                        }
+                    }
+                    
+                }
+            }                     
+        }
+        .last{
+            margin-top: 25px;
+            @include zero;
+            float: right;
+            width: 294px;
+            height: 48px;
+            line-height: 48px;
+            border: 1px solid #e0e0e0;
+            > input{
+                line-height: 48px;
+                float: left;
+                border: none;
+                border-bottom: 1px solid #e0e0e0;
+                border-right: 1px solid #e0e0e0;
+                width: 242px;
+                height: 47px;
+                outline: none;
+            }
+            span{
+               margin-left: 17px;
+                cursor: pointer;
+                font-size: 18px;
+            }
+        }
+    }
+}

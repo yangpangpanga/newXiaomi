@@ -1,0 +1,24 @@
+img{
+    vertical-align: middle;
+    border: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+html,body{
+    min-width: 76.625rem;
+}
+@mixin clearF {
+    &:after{
+        content:".";
+        display:block;
+        height:0;
+        visibility:hidden;
+        clear:both;
+    }
+
+}
