@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^1.11.0",
+    "jquery": "^3.4.1",
     "swiper": "^5.3.6"
   }
 }
