@@ -126,7 +126,7 @@ function colors(){
 //倒计时区域
 var timer = setInterval(function(){
       var now = new Date();
-      var future = new Date(2020,2,13,12,0,0);
+      var future = new Date(2020,2,16,12,0,0);
       var times = future.getTime() - now.getTime();
       var hours = parseInt(times / 1000 / 60 / 60) ;
       var minutes = parseInt((times - (hours * 60 * 60 *1000)) / 1000 / 60) ;
@@ -135,7 +135,7 @@ var timer = setInterval(function(){
       hours = hours > 9? hours:'0' + hours;
       minutes = minutes > 9? minutes:'0' + minutes;
       seconds = seconds > 9? seconds:'0' + seconds;
-      if(hours == 0 && minutes == 0 && seconds == 0){
+      if(hours <= 0 && minutes <= 0 && seconds <= 0){
         clearInterval(timer)
         $('.leftsale span').html('00');
 

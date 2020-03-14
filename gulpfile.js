@@ -11,6 +11,7 @@ gulp.task('webS',function(done){
     connect.server({
         root:"./dist",
         livereload:true
+   
     })
     done()
 })
